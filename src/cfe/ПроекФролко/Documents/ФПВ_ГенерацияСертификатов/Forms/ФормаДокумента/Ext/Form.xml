@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Шапка" id="81">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="82"/>
+			<ChildItems>
+				<InputField name="Дата" id="5">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="7"/>
+				</InputField>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Номинал" id="9">
+			<DataPath>Объект.Номинал</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="НоминалКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="НоминалРасширеннаяПодсказка" id="11"/>
+		</InputField>
+		<InputField name="Количество" id="13">
+			<DataPath>Объект.Количество</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КоличествоКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="КоличествоРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="UUIDЗапроса" id="17">
+			<DataPath>Объект.UUIDЗапроса</DataPath>
+			<Visible>false</Visible>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="UUIDЗапросаКонтекстноеМеню" id="18"/>
+			<ExtendedTooltip name="UUIDЗапросаРасширеннаяПодсказка" id="19"/>
+		</InputField>
+		<InputField name="СрокДействия" id="21">
+			<DataPath>Объект.СрокДействия</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="СрокДействияКонтекстноеМеню" id="22"/>
+			<ExtendedTooltip name="СрокДействияРасширеннаяПодсказка" id="23"/>
+		</InputField>
+		<InputField name="Статус" id="29">
+			<DataPath>1/0:1716aefe-9ccc-43d3-93fc-03a933e83142</DataPath>
+			<Visible>false</Visible>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="СтатусКонтекстноеМеню" id="30"/>
+			<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="31"/>
+		</InputField>
+		<Table name="Сертификаты" id="33">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Сертификаты</DataPath>
+			<ShowCommandBar>auto</ShowCommandBar>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СертификатыКонтекстноеМеню" id="34"/>
+			<AutoCommandBar name="СертификатыКоманднаяПанель" id="35">
+				<ChildItems>
+					<Button name="ГенерацияСертификатов" id="83">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ГенерацияСертификатов</CommandName>
+						<ExtendedTooltip name="ГенерацияСертификатовРасширеннаяПодсказка" id="84"/>
+					</Button>
+					<Button name="СертификатыЗапросНаГенерациюСертификатов" id="100">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗапросНаГенерациюСертификатов</CommandName>
+						<ExtendedTooltip name="СертификатыЗапросНаГенерациюСертификатовРасширеннаяПодсказка" id="101"/>
+					</Button>
+					<Button name="СертификатыОтправитьСгенерированныеСертификаты" id="102">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОтправитьСгенерированныеСертификаты</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Удалить</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="СертификатыОтправитьСгенерированныеСертификатыРасширеннаяПодсказка" id="103"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СертификатыРасширеннаяПодсказка" id="36"/>
+			<SearchStringAddition name="СертификатыСтрокаПоиска" id="37">
+				<AdditionSource>
+					<Item>Сертификаты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СертификатыСтрокаПоискаКонтекстноеМеню" id="38"/>
+				<ExtendedTooltip name="СертификатыСтрокаПоискаРасширеннаяПодсказка" id="39"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СертификатыСостояниеПросмотра" id="40">
+				<AdditionSource>
+					<Item>Сертификаты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СертификатыСостояниеПросмотраКонтекстноеМеню" id="41"/>
+				<ExtendedTooltip name="СертификатыСостояниеПросмотраРасширеннаяПодсказка" id="42"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СертификатыУправлениеПоиском" id="43">
+				<AdditionSource>
+					<Item>Сертификаты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СертификатыУправлениеПоискомКонтекстноеМеню" id="44"/>
+				<ExtendedTooltip name="СертификатыУправлениеПоискомРасширеннаяПодсказка" id="45"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="СертификатыНомерСтроки" id="54">
+					<DataPath>Объект.Сертификаты.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СертификатыНомерСтрокиКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="СертификатыНомерСтрокиРасширеннаяПодсказка" id="56"/>
+				</LabelField>
+				<InputField name="СертификатыНомер" id="58">
+					<DataPath>Объект.Сертификаты.Номер</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="СертификатыНомерКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="СертификатыНомерРасширеннаяПодсказка" id="60"/>
+				</InputField>
+				<InputField name="СертификатыСертификат" id="62">
+					<DataPath>Объект.Сертификаты.Сертификат</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="СертификатыСертификатКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="СертификатыСертификатРасширеннаяПодсказка" id="64"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<InputField name="Комментарий" id="25">
+			<DataPath>Объект.Комментарий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<InputField name="UUIDЗапроса1" id="119">
+			<DataPath>Объект.UUIDЗапроса</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="UUIDЗапроса1КонтекстноеМеню" id="120"/>
+			<ExtendedTooltip name="UUIDЗапроса1РасширеннаяПодсказка" id="121"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ФПВ_ГенерацияСертификатов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ГенерацияСертификатов" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Генерация сертификатов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Генерация сертификатов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ГенерацияСертификатов</Action>
+			<FunctionalOptions>
+				<Item>b70bf447-a714-4fc1-ac26-723e86fe1181</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ЗапросНаГенерациюСертификатов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрос на генерацию сертификатов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрос на генерацию сертификатов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапросНаГенерациюСертификатов</Action>
+			<FunctionalOptions>
+				<Item>b0c19144-768d-40f1-a3eb-446848621fa9</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ОтправитьСгенерированныеСертификаты" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить сгенерированные сертификаты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить сгенерированные сертификаты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтправитьСгенерированныеСертификаты</Action>
+			<FunctionalOptions>
+				<Item>b70bf447-a714-4fc1-ac26-723e86fe1181</Item>
+			</FunctionalOptions>
+		</Command>
+	</Commands>
+</Form>

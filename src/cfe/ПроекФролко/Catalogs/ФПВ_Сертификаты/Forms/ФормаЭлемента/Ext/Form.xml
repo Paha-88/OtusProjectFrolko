@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="5">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="7"/>
+		</InputField>
+		<LabelField name="Статус" id="40">
+			<DataPath>Статус</DataPath>
+			<Enabled>false</Enabled>
+			<ContextMenu name="СтатусКонтекстноеМеню" id="41"/>
+			<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="42"/>
+		</LabelField>
+		<InputField name="Номинал" id="9">
+			<DataPath>Объект.Номинал</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="НоминалКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="НоминалРасширеннаяПодсказка" id="11"/>
+		</InputField>
+		<LabelField name="СуммаОстаток" id="36">
+			<DataPath>СуммаОстаток</DataPath>
+			<Enabled>false</Enabled>
+			<ContextMenu name="СуммаОстатокКонтекстноеМеню" id="37"/>
+			<ExtendedTooltip name="СуммаОстатокРасширеннаяПодсказка" id="38"/>
+		</LabelField>
+		<InputField name="ДатаВыпуска" id="13">
+			<DataPath>Объект.ДатаВыпуска</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаВыпускаКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ДатаВыпускаРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="ДатаАктивации" id="17">
+			<DataPath>Объект.ДатаАктивации</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаАктивацииКонтекстноеМеню" id="18"/>
+			<ExtendedTooltip name="ДатаАктивацииРасширеннаяПодсказка" id="19"/>
+		</InputField>
+		<InputField name="СрокДействия" id="21">
+			<DataPath>Объект.СрокДействия</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="СрокДействияКонтекстноеМеню" id="22"/>
+			<ExtendedTooltip name="СрокДействияРасширеннаяПодсказка" id="23"/>
+		</InputField>
+		<InputField name="UUIDГенерации" id="25">
+			<DataPath>1/0:741dc5fc-9fc6-46a3-906e-a327d3b850c3</DataPath>
+			<Visible>false</Visible>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="UUIDГенерацииКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="UUIDГенерацииРасширеннаяПодсказка" id="27"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ФПВ_Сертификаты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СуммаОстаток" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма остаток</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Статус" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ФПВ_СтатусыСертификатов</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>
