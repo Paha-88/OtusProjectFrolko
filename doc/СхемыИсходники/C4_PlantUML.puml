@@ -1,0 +1,40 @@
+@startuml C4_Container
+!include <C4/C4_Container>
+
+' Принудительная компоновка сверху вниз
+LAYOUT_TOP_DOWN()
+
+title C4 Container — Сертификаты
+
+Person(manager, "Менеджер продаж", "Оформляет продажу и списание сертификатов")
+Person(admin, "Администратор", "Управляет номиналами, аннулированием, настройками")
+
+System_Boundary(block_bsp, "БСП 3.1 + расширение Сертификаты") {
+
+  System_Boundary(block_adm, "Администрирование и настройки") {
+    Container(Gen_Serf, "Генерация сертификатов", "1С", "Создание сертификатов по номиналам")
+    Container(annul_serf, "Аннулирование сертификатов", "1С", "Аннулирование и возврат")
+  }
+
+  System_Boundary(block_prod, "Учет") {
+    Container(sale_Serf, "Продажа сертификатов", "1С", "Оформление продажи")
+    Container(Spisanie_serf, "Списание сертификатов", "1С", "Частичное и полное списание")
+  }
+}
+
+System_Ext(rmq, "RMQ", "Обмен данными по сертификатам")
+
+Rel(manager, sale_Serf, "Оформляет продажу")
+Rel(manager, Spisanie_serf, "Оформляет списание")
+Rel(admin, Gen_Serf, "Генерирует")
+Rel(admin, annul_serf, "Аннулирует")
+
+Rel(block_prod, rmq, "Запрос сертификатов")
+Rel(block_adm, rmq, "Возврат сертификатов")
+Rel(rmq, block_adm, "Получение запроса")
+Rel(rmq, block_prod, "Получение сертификатов")
+
+' Невидимая связь, чтобы RMQ гарантированно оказался ниже block_bsp
+block_bsp -[hidden]down-> rmq
+
+@enduml
