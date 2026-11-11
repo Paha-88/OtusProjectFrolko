@@ -44,6 +44,9 @@
 			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 			<ContextMenu name="СертификатКонтекстноеМеню" id="10"/>
 			<ExtendedTooltip name="СертификатРасширеннаяПодсказка" id="11"/>
+			<Events>
+				<Event name="OnChange">СертификатПриИзменении</Event>
+			</Events>
 		</InputField>
 		<InputField name="Покупатель" id="17">
 			<DataPath>Объект.Покупатель</DataPath>
