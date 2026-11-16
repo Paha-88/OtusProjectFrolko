@@ -22,7 +22,9 @@ System_Boundary(block_bsp, "БСП 3.1 + расширение Сертифика
   }
 }
 
-System_Ext(rmq, "RMQ", "Обмен данными по сертификатам")
+System_Boundary(block_RMQ, "RabbitMQ") {
+  System_Ext(rmq, "RMQ", "Обмен данными по сертификатам")
+} 
 
 Rel(manager, sale_Serf, "Оформляет продажу")
 Rel(manager, Spisanie_serf, "Оформляет списание")
